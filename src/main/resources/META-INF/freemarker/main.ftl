@@ -51,30 +51,30 @@
     <link href="css/footable/footable.sortable-0.1.css" rel="stylesheet" type="text/css"/>
 
     <style type="text/css">
-            /* You have the option of setting a maximum width for your page, and making sure everything is centered */
+        /* You have the option of setting a maximum width for your page, and making sure everything is centered */
         body {
             max-width: 1600px;
             margin: 0 auto;
         }
 
-            /*.registry td {*/
-            /*border-bottom: gray dashed 1px;*/
-            /*}*/
+        /*.registry td {*/
+        /*border-bottom: gray dashed 1px;*/
+        /*}*/
 
-            /*.urls {*/
-            /*font-size: 90%;*/
-            /*}*/
+        /*.urls {*/
+        /*font-size: 90%;*/
+        /*}*/
 
-            /*.active {*/
-            /*background-color: #edf5ea;*/
+        /*.active {*/
+        /*background-color: #edf5ea;*/
 
         .inactive {
             background-color: #f8cfcf;
         }
 
-            /* --------------------------------
-                GLOBAL SEARCH TEMPLATE - START
-               -------------------------------- */
+        /* --------------------------------
+            GLOBAL SEARCH TEMPLATE - START
+           -------------------------------- */
         .loading {
             background: url("images/ajax-loader.gif") no-repeat right;
         }
@@ -87,9 +87,9 @@
             border-radius: 5px 5px 5px 5px;
         }
 
-            /* --------------------------------
-                GLOBAL SEARCH TEMPLATE - END
-               -------------------------------- */
+        /* --------------------------------
+            GLOBAL SEARCH TEMPLATE - END
+           -------------------------------- */
     </style>
 
     <!-- end CSS-->
@@ -119,243 +119,245 @@
 </div>
 
 <div id="wrapper" class="container_24">
-<header>
-    <div id="global-masthead" class="masthead grid_24">
-        <!--This has to be one line and no newline characters-->
-        <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img
-                src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png"
-                alt="EMBL European Bioinformatics Institute"></a>
+    <header>
+        <div id="global-masthead" class="masthead grid_24">
+            <!--This has to be one line and no newline characters-->
+            <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img
+                    src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png"
+                    alt="EMBL European Bioinformatics Institute"></a>
 
-        <nav>
-            <ul id="global-nav">
-                <!-- set active class as appropriate -->
-                <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
-                <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
-                <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
-                <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
-                <li class="last" id="about"><a href="//www.ebi.ac.uk/about">About us</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul id="global-nav">
+                    <!-- set active class as appropriate -->
+                    <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
+                    <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
+                    <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
+                    <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
+                    <li class="last" id="about"><a href="//www.ebi.ac.uk/about">About us</a></li>
+                </ul>
+            </nav>
 
-    </div>
-
-    <div id="local-masthead" class="masthead grid_24 nomenu">
-
-        <!-- local-title -->
-        <!-- NB: for additional title style patterns, see http://frontier.ebi.ac.uk/web/style/patterns -->
-
-        <div class="grid_12 alpha" id="local-title">
-        <h1><a href="#" title="Back to PSICQUIC Registry homepage">PSICQUIC Registry</a></h1>
         </div>
 
-        <!-- /local-title -->
+        <div id="local-masthead" class="masthead grid_24 nomenu">
 
-        <!-- local-search -->
-        <!-- NB: if you do not have a local-search, delete the following div, and drop the class="grid_12 alpha" class from local-title above -->
+            <!-- local-title -->
+            <!-- NB: for additional title style patterns, see http://frontier.ebi.ac.uk/web/style/patterns -->
 
-    <#--<div class="grid_12 omega">-->
-    <#--<form id="local-search" name="local-search" action="[search-action]" method="post" onsubmit="updateSummary();return false;">-->
+            <div class="grid_12 alpha" id="local-title">
+                <h1><a href="#" title="Back to PSICQUIC Registry homepage">PSICQUIC Registry</a></h1>
+            </div>
 
-    <#--<fieldset>-->
+            <!-- /local-title -->
 
-    <#--<div class="left">-->
-    <#--<label>-->
-    <#--<input type="text" name="first" id="local-searchbox">-->
-    <#--</label>-->
-    <#--<!-- Include some example searchterms - keep them short and few! &ndash;&gt;-->
-    <#--<span class="examples">Examples: <a href="http://frontier.ebi.ac.uk/ebisearch/globalsearchsummary.ebi?query=kinase">kinase</a></span>-->
-    <#--</div>-->
+            <!-- local-search -->
+            <!-- NB: if you do not have a local-search, delete the following div, and drop the class="grid_12 alpha" class from local-title above -->
 
-    <#--<div class="right">-->
-    <#--<input type="submit" name="submit" value="Search" class="submit">-->
-    <#--<!-- If your search is more complex than just a keyword search, you can link to an Advanced Search,-->
-    <#--with whatever features you want available &ndash;&gt;-->
-    <#--&lt;#&ndash;<span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>&ndash;&gt;-->
-    <#--</div>-->
+        <#--<div class="grid_12 omega">-->
+        <#--<form id="local-search" name="local-search" action="[search-action]" method="post" onsubmit="updateSummary();return false;">-->
 
-    <#--</fieldset>-->
+        <#--<fieldset>-->
 
-    <#--</form>-->
-    <#--</div>-->
+        <#--<div class="left">-->
+        <#--<label>-->
+        <#--<input type="text" name="first" id="local-searchbox">-->
+        <#--</label>-->
+        <#--<!-- Include some example searchterms - keep them short and few! &ndash;&gt;-->
+        <#--<span class="examples">Examples: <a href="http://frontier.ebi.ac.uk/ebisearch/globalsearchsummary.ebi?query=kinase">kinase</a></span>-->
+        <#--</div>-->
 
-        <!-- /local-search -->
+        <#--<div class="right">-->
+        <#--<input type="submit" name="submit" value="Search" class="submit">-->
+        <#--<!-- If your search is more complex than just a keyword search, you can link to an Advanced Search,-->
+        <#--with whatever features you want available &ndash;&gt;-->
+        <#--&lt;#&ndash;<span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>&ndash;&gt;-->
+        <#--</div>-->
 
-        <!-- local-nav -->
+        <#--</fieldset>-->
 
-        <nav>
-            <ul class="grid_24" id="local-nav">
-                <li class="first active"><a href="#">Home</a></li>
-                <li><a href="http://code.google.com/p/psicquic/wiki/Registry">Documentation</a></li>
-                <li class="last"><a href="#aboutRegistry">About PSICQUIC Registry</a></li>
-                <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
-                                                                                                 add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
-                                                                                                 whichever one will show up last...
-                                                                                                 For example: -->
-            <#--<li class="functional last"><a href="#" class="icon icon-functional" data-icon="l">Login</a></li>-->
-            <#--<li class="functional"><a href="#" class="icon icon-generic" data-icon="\">Feedback</a></li>-->
-            <#--<li class="functional"><a href="#" class="icon icon-functional" data-icon="r">Share</a></li>-->
-            </ul>
-        </nav>
+        <#--</form>-->
+        <#--</div>-->
 
-        <!-- /local-nav -->
+            <!-- /local-search -->
 
-    </div>
-</header>
+            <!-- local-nav -->
 
-<div id="content" role="main" class="grid_24 clearfix">
+            <nav>
+                <ul class="grid_24" id="local-nav">
+                    <li class="first active"><a href="#">Home</a></li>
+                    <li><a href="http://code.google.com/p/psicquic/wiki/Registry">Documentation</a></li>
+                    <li class="last"><a href="#aboutRegistry">About PSICQUIC Registry</a></li>
+                    <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
+                                                                                                     add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
+                                                                                                     whichever one will show up last...
+                                                                                                     For example: -->
+                <#--<li class="functional last"><a href="#" class="icon icon-functional" data-icon="l">Login</a></li>-->
+                <#--<li class="functional"><a href="#" class="icon icon-generic" data-icon="\">Feedback</a></li>-->
+                <#--<li class="functional"><a href="#" class="icon icon-functional" data-icon="r">Share</a></li>-->
+                </ul>
+            </nav>
 
-    <!-- If you require a breadcrumb trail, its root should be your service.
-                You don't need a breadcrumb trail on the homepage of your service... -->
-<#--<nav id="breadcrumb">-->
-<#--<p>-->
-<#--<a href="#">PSICQUIC</a> &gt;Registry-->
-<#--</p>-->
-<#--</nav>-->
+            <!-- /local-nav -->
 
-    <!-- Example layout containers -->
+        </div>
+    </header>
 
-<#--<section class="grid_6 alpha" id="search-filters">-->
-<#--<p>Data facets, search filters, etc</p>-->
-<#--</section>-->
+    <div id="content" role="main" class="grid_24 clearfix">
 
-    <h2>Registry</h2>
+        <!-- If you require a breadcrumb trail, its root should be your service.
+                    You don't need a breadcrumb trail on the homepage of your service... -->
+    <#--<nav id="breadcrumb">-->
+    <#--<p>-->
+    <#--<a href="#">PSICQUIC</a> &gt;Registry-->
+    <#--</p>-->
+    <#--</nav>-->
 
-    <p>Total: <strong>${totalCount}</strong>&#160;Interactions from <strong>${serviceCount}</strong> PSICQUIC
-        Services, of which <strong>${servicesDown}</strong> are currently down.</p>
+        <!-- Example layout containers -->
 
+    <#--<section class="grid_6 alpha" id="search-filters">-->
+    <#--<p>Data facets, search filters, etc</p>-->
+    <#--</section>-->
 
-    <p>Filter: <input id="filter" type="text" /></p>
-    <table class="footable" data-filter="#filter" style="font-size: 85%">
-        <thead>
-        <tr>
-            <th data-class="expand" data-sort-initial="true" data-type="alpha">Name</th>
-            <th data-type="alpha">Status</th>
-            <th data-hide="phone" data-type="numeric">Interactions</th>
-            <th data-hide="phone,tablet" data-type="alpha">Version</th>
-            <th data-hide="phone,tablet" data-type="alpha">URLs</th>
-            <th data-hide="phone,tablet" data-type="alpha">Restricted</th>
-            <th data-hide="phone,tablet">Tags</th>
-        <#--<th>Comments</th>-->
-        </tr>
-        </thead>
-    <#list registry.services as service>
-    <tr class="${service.active?string("active", "inactive")}" style="vertical-align:top">
-        <td>
-            <a href="${service.organizationUrl}" target="_blank"><strong>${service.name}</strong></a>
-            <br/>
-        </td>
-        <td data-value="${service.active?string("active", "inactive")}">
-            <#if service.active>
-                <img src="images/active.png" alt="Active" title="active">
-            <#else>
-                <img src="images/inactive.png" alt="Inactive" title="inactive">
-            </#if>
-            <br/>
-        </td>
-        <td style="text-align:right">${service.count}<br/></td>
-        <td>${service.version!'-'}<br/></td>
-        <td>
-            SOAP: ${service.soapUrl}<br/>
-            <#if service.restUrl??>
-                REST: ${service.restUrl}<br/>
-            <#else>
-                REST: N/A<br/>
-            </#if>
-            <br/>
-            <#if service.restExample??>
-                <a href="${service.restExample}" target="_blank">REST example</a><br/>
-            <#else>
-                N/A<br/>
-            </#if>
-        </td>
-        <td>${service.restricted?string("YES", "NO")}<br/></td>
-        <td>
-            <#if (service.tags)?has_content>
-                <#list service.tags as tag>
-                    <#if tag?starts_with('MI:')>
-                        <a href="http://www.ebi.ac.uk/ontology-lookup/?termId=${tag}"
-                           target="_blank">${termName(tag)}</a>
-                    <#else>
-                    ${termName(tag)}
-                    </#if>
-                    <#if tag_has_next> <br/> </#if>
-                </#list>&#160;
-            <#else>
-                N/A
-            </#if>
-            <br/><br/>
+        <h2>Registry</h2>
 
-        </td>
-    <#--<td>${service.comments!''}&#160;</td>-->
-    </#list>
-    </table>
-    </p>
+        <p>Total: <strong>${totalCount}</strong>&#160;Interactions from <strong>${serviceCount}</strong> PSICQUIC
+            Services, of which <strong>${servicesDown}</strong> are currently down.</p>
 
 
-    <h3 id="aboutRegistry">About PSICQUIC Registry</h3>
+        <p>Filter: <input id="filter" type="text" /></p>
+        <table class="footable" data-filter="#filter" style="font-size: 85%">
+            <thead>
+            <tr>
+                <th data-class="expand" data-sort-initial="true" data-type="alpha">Name</th>
+                <th data-type="alpha">Status</th>
+                <th data-hide="phone" data-type="numeric">Interactions</th>
+                <th data-hide="phone,tablet" data-type="alpha">Version</th>
+                <th data-hide="phone,tablet" data-type="alpha">URLs</th>
+                <th data-hide="phone,tablet" data-type="alpha">Description</th>
+                <th data-hide="phone,tablet" data-type="alpha">Restricted</th>
+                <th data-hide="phone,tablet">Tags</th>
+            <#--<th>Comments</th>-->
+            </tr>
+            </thead>
+        <#list registry.services as service>
+        <tr class="${service.active?string("active", "inactive")}" style="vertical-align:top">
+            <td>
+                <a href="${service.organizationUrl}" target="_blank"><strong>${service.name}</strong></a>
+                <br/>
+            </td>
+            <td data-value="${service.active?string("active", "inactive")}">
+                <#if service.active>
+                    <img src="images/active.png" alt="Active" title="active">
+                <#else>
+                    <img src="images/inactive.png" alt="Inactive" title="inactive">
+                </#if>
+                <br/>
+            </td>
+            <td style="text-align:right">${service.count}<br/></td>
+            <td>${service.version!'-'}<br/></td>
+            <td>
+                SOAP: ${service.soapUrl}<br/>
+                <#if service.restUrl??>
+                    REST: ${service.restUrl}<br/>
+                <#else>
+                    REST: N/A<br/>
+                </#if>
+                <br/>
+                <#if service.restExample??>
+                    <a href="${service.restExample}" target="_blank">REST example</a><br/>
+                <#else>
+                    N/A<br/>
+                </#if>
+            </td>
+            <td>${service.description}<br/></td>
+            <td>${service.restricted?string("YES", "NO")}<br/></td>
+            <td>
+                <#if (service.tags)?has_content>
+                    <#list service.tags as tag>
+                        <#if tag?starts_with('MI:')>
+                            <a href="http://www.ebi.ac.uk/ontology-lookup/?termId=${tag}"
+                               target="_blank">${termName(tag)}</a>
+                        <#else>
+                        ${termName(tag)}
+                        </#if>
+                        <#if tag_has_next> <br/> </#if>
+                    </#list>&#160;
+                <#else>
+                    N/A
+                </#if>
+                <br/><br/>
 
-    <p>The PSICQUIC Registry contains the list of PSICQUIC services available, their tags, and their current status.
-        The registry also shows the number of total binary interactions that each resource has made available through
-        PSICQUIC.
-
-        For more information about PSICQUIC, please visit the <a href="http://code.google.com/p/psicquic/">Google
-            Project documentation</a>.</p>
-</div>
-
-
-<footer>
-    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
-    <div id="local-footer" class="grid_24 clearfix">
-        <p>Want to add your PSICQUIC service here? Check
-            <a href="http://code.google.com/p/psicquic/wiki/HowToInstallPsicquicSolr">this</a>.
+            </td>
+        <#--<td>${service.comments!''}&#160;</td>-->
+        </#list>
+        </table>
         </p>
+
+
+        <h3 id="aboutRegistry">About PSICQUIC Registry</h3>
+
+        <p>The PSICQUIC Registry contains the list of PSICQUIC services available, their tags, and their current status.
+            The registry also shows the number of total binary interactions that each resource has made available through
+            PSICQUIC.
+
+            For more information about PSICQUIC, please visit the <a href="http://code.google.com/p/psicquic/">Google
+                Project documentation</a>.</p>
     </div>
 
 
-    <!-- End optional local footer -->
+    <footer>
+        <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+        <div id="local-footer" class="grid_24 clearfix">
+            <p>Want to add your PSICQUIC service here? Check
+                <a href="http://code.google.com/p/psicquic/wiki/HowToInstallPsicquicSolr">this</a>.
+            </p>
+        </div>
 
-    <div id="global-footer" class="grid_24">
 
-        <nav id="global-nav-expanded">
+        <!-- End optional local footer -->
 
-            <div class="grid_4 alpha">
-                <h3 class="embl-ebi"><a href="//www.ebi.ac.uk/" title="EMBL-EBI">EMBL-EBI</a></h3>
-            </div>
+        <div id="global-footer" class="grid_24">
 
-            <div class="grid_4">
-                <h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
-            </div>
+            <nav id="global-nav-expanded">
 
-            <div class="grid_4">
-                <h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
-            </div>
+                <div class="grid_4 alpha">
+                    <h3 class="embl-ebi"><a href="//www.ebi.ac.uk/" title="EMBL-EBI">EMBL-EBI</a></h3>
+                </div>
 
-            <div class="grid_4">
-                <h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
-            </div>
+                <div class="grid_4">
+                    <h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
+                </div>
 
-            <div class="grid_4">
-                <h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
-            </div>
+                <div class="grid_4">
+                    <h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
+                </div>
 
-            <div class="grid_4 omega">
-                <h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
-            </div>
+                <div class="grid_4">
+                    <h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
+                </div>
 
-        </nav>
+                <div class="grid_4">
+                    <h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
+                </div>
 
-        <section id="ebi-footer-meta">
-            <p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp;
-                &nbsp; +44 (0)1223 49 44 44</p>
+                <div class="grid_4 omega">
+                    <h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
+                </div>
 
-            <p class="legal">Copyright &copy; EMBL-EBI 2012 | EBI is an Outstation of the <a
-                    href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="/about/privacy">Privacy</a>
-                | <a href="/about/cookies">Cookies</a> | <a href="/about/terms-of-use">Terms of use</a></p>
-        </section>
+            </nav>
 
-    </div>
+            <section id="ebi-footer-meta">
+                <p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp;
+                    &nbsp; +44 (0)1223 49 44 44</p>
 
-</footer>
+                <p class="legal">Copyright &copy; EMBL-EBI 2012 | EBI is an Outstation of the <a
+                        href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="/about/privacy">Privacy</a>
+                    | <a href="/about/cookies">Cookies</a> | <a href="/about/terms-of-use">Terms of use</a></p>
+            </section>
+
+        </div>
+
+    </footer>
 </div>
 <!--! end of #wrapper -->
 

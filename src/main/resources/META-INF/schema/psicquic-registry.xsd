@@ -18,6 +18,7 @@
       <xs:element name="version" type="xs:string" />
       <xs:element name="organizationUrl" type="xs:string" />
       <xs:element name="comments" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
       <xs:element name="restricted" type="xs:boolean" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="tag" type="xs:string" />
     </xs:sequence>

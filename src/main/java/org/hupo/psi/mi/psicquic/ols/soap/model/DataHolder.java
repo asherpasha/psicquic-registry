@@ -41,8 +41,7 @@ public class DataHolder  implements java.io.Serializable {
 
     /**
      * Sets the annotationNumberValue value for this DataHolder.
-     * 
-     * @param annotationNumberValue
+     * @param annotationNumberValue annotation number value
      */
     public void setAnnotationNumberValue(java.lang.Double annotationNumberValue) {
         this.annotationNumberValue = annotationNumberValue;
@@ -62,7 +61,7 @@ public class DataHolder  implements java.io.Serializable {
     /**
      * Sets the annotationStringValue value for this DataHolder.
      * 
-     * @param annotationStringValue
+     * @param annotationStringValue annotation string value
      */
     public void setAnnotationStringValue(java.lang.String annotationStringValue) {
         this.annotationStringValue = annotationStringValue;
@@ -82,7 +81,7 @@ public class DataHolder  implements java.io.Serializable {
     /**
      * Sets the annotationType value for this DataHolder.
      * 
-     * @param annotationType
+     * @param annotationType annotation type
      */
     public void setAnnotationType(java.lang.String annotationType) {
         this.annotationType = annotationType;
@@ -102,7 +101,7 @@ public class DataHolder  implements java.io.Serializable {
     /**
      * Sets the termId value for this DataHolder.
      * 
-     * @param termId
+     * @param termId term id
      */
     public void setTermId(java.lang.String termId) {
         this.termId = termId;
@@ -112,7 +111,7 @@ public class DataHolder  implements java.io.Serializable {
     /**
      * Gets the termName value for this DataHolder.
      * 
-     * @return termName
+     * @return termName term name
      */
     public java.lang.String getTermName() {
         return termName;
@@ -122,7 +121,7 @@ public class DataHolder  implements java.io.Serializable {
     /**
      * Sets the termName value for this DataHolder.
      * 
-     * @param termName
+     * @param termName term name
      */
     public void setTermName(java.lang.String termName) {
         this.termName = termName;
@@ -225,6 +224,7 @@ public class DataHolder  implements java.io.Serializable {
 
     /**
      * Return type metadata object
+     * @return it returns type description
      */
     public static org.apache.axis.description.TypeDesc getTypeDesc() {
         return typeDesc;
@@ -232,6 +232,10 @@ public class DataHolder  implements java.io.Serializable {
 
     /**
      * Get Custom Serializer
+     * @param mechType mech type
+     * @param _javaType java type
+     * @param _xmlType xml type
+     * @return returns BeanSerializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
            java.lang.String mechType, 
@@ -244,6 +248,10 @@ public class DataHolder  implements java.io.Serializable {
 
     /**
      * Get Custom Deserializer
+     * @param mechType mech type
+     * @param _javaType java type
+     * @param _xmlType xml type
+     * @return it returns BeanDeserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
            java.lang.String mechType, 

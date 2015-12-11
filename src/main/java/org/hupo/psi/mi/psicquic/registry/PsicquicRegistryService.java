@@ -24,12 +24,13 @@ import javax.ws.rs.QueryParam;
  * RESTful web service.
  *
  * v.1.0/search/query/brca2
- * current/search/query/species:human?format=xml25&firstResult=50&maxResults=100
+ * current/search/query/species:human?format=xml25&amp;firstResult=50&amp;maxResults=100
  *
  *
  * @author Bruno Aranda (baranda@ebi.ac.uk)
  * @version $Id$
  */
+
 @Path("/registry")
 public interface PsicquicRegistryService {
 

@@ -12,7 +12,9 @@ public class OLSClient {
 
     /**
      * calls OLS webserver and gets child terms for a termId
-     * @return Map of child terms - key is termId, value is termName.
+     * @param termId  termId
+     * @param ontology  ontology
+     * @return Map of child terms - key is termId, value is termName
      * Map should not be null.
      */
     public Map<String, String> getTermChildren(String termId, String ontology) {
@@ -37,7 +39,9 @@ public class OLSClient {
 
     /**
      * calls OLS webserver and gets suggestions of terms for a given query
-     * @return Map of suggested terms - key is termId, value is termName.
+     * @param text text
+     * @param ontology ontology
+     * @return of suggested terms - key is termId, value is termName.
      * Map should not be null.
      */
     public Map<String, String> getTermsByName(String text, String ontology) {

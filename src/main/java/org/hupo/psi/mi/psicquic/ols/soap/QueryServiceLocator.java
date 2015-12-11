@@ -112,8 +112,11 @@ public class QueryServiceLocator extends org.apache.axis.client.Service implemen
     }
 
     /**
-    * Set the endpoint address for the specified port name.
-    */
+     * Set the endpoint address for the specified port name.
+     * @param portName port name
+     * @param address address
+     * @throws javax.xml.rpc.ServiceException throws service exception
+     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
 if ("OntologyQuery".equals(portName)) {
@@ -126,8 +129,11 @@ if ("OntologyQuery".equals(portName)) {
     }
 
     /**
-    * Set the endpoint address for the specified port name.
-    */
+     * Set the endpoint address for the specified port name.
+     * @param portName port name
+     * @param address address
+     * @throws javax.xml.rpc.ServiceException throws service exception
+     */
     public void setEndpointAddress(javax.xml.namespace.QName portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         setEndpointAddress(portName.getLocalPart(), address);
     }

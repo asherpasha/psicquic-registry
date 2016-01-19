@@ -10,9 +10,9 @@
     <name>PSI :: PSICQUIC Registry Service</name>
 
     <scm>
-        <connection>scm:svn:https://psicquic.googlecode.com/svn/trunk/psicquic-registry</connection>
-        <developerConnection>scm:svn:https://psicquic.googlecode.com/svn/trunk/psicquic-registry</developerConnection>
-        <url>http://code.google.com/p/psicquic/source/browse/#svn/trunk/psicquic-registry</url>
+        <connection>scm:git:https://github.com/PSICQUIC/psicquic-registry</connection>
+        <developerConnection>scm:git:https://github.com/PSICQUIC/psicquic-registry</developerConnection>
+        <url>https://github.com/PSICQUIC/psicquic-registry</url>
     </scm>
 
     <properties>
@@ -152,6 +152,16 @@
                     </connectors>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <contextPath>${appRoot}/${jetty.context}</contextPath>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <remoteTagging>true</remoteTagging>
+                    <goals>deploy</goals>
                 </configuration>
             </plugin>
 

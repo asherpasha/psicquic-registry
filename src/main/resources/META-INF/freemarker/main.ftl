@@ -233,7 +233,7 @@
                 <th data-hide="phone" data-type="numeric">Interactions</th>
                 <th data-hide="phone,tablet" data-type="alpha">Version</th>
                 <th data-hide="phone,tablet" data-type="alpha">URLs</th>
-                <th data-hide="phone,tablet" data-type="alpha">Description</th>
+                <th data-hide="phone,tablet" width="15%" data-type="alpha">Description</th>
                 <th data-hide="phone,tablet" data-type="alpha">Restricted</th>
                 <th data-hide="phone,tablet">Tags</th>
             <#--<th>Comments</th>-->

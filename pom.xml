@@ -5,7 +5,7 @@
     <artifactId>psicquic-registry</artifactId>
     <packaging>war</packaging>
 
-    <version>1.2.4</version>
+    <version>1.2.5-SNAPSHOT</version>
 
     <name>PSI :: PSICQUIC Registry Service</name>
 
@@ -13,7 +13,7 @@
         <connection>scm:git:https://github.com/PSICQUIC/psicquic-registry</connection>
         <developerConnection>scm:git:https://github.com/PSICQUIC/psicquic-registry</developerConnection>
         <url>https://github.com/PSICQUIC/psicquic-registry</url>
-      <tag>psicquic-registry-1.2.4</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <properties>

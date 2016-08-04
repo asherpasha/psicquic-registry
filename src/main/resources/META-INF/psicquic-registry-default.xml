@@ -7,6 +7,7 @@
         <restUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/interactor/P00533</restExample>
         <organizationUrl>http://bioinfow.dep.usal.es/apid/index.htm</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1058</tag> <!-- imported -->
@@ -20,6 +21,7 @@
         <restUrl>http://tyerslab.bio.ed.ac.uk:8080/psicquic/webservices/current/search/</restUrl>
         <restExample>http://tyerslab.bio.ed.ac.uk:8080/psicquic/webservices/current/search/interactor/brca2</restExample>
         <organizationUrl>http://www.thebiogrid.org/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -34,6 +36,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/chembl/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/chembl/webservices/current/search/interactor/imatinib</restExample>
         <organizationUrl>http://www.ebi.ac.uk/chembl</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein -->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -44,10 +47,27 @@
 
     <service>
         <name>DIP</name>
-        <soapUrl>http://imex.mbi.ucla.edu/psicquic-ws/webservices/psicquic</soapUrl>
-        <restUrl>http://imex.mbi.ucla.edu/psicquic-ws/webservices/current/search/</restUrl>
-        <restExample>http://imex.mbi.ucla.edu/psicquic-ws/webservices/current/search/query/Q09472</restExample>
+        <soapUrl>http://imex.mbi.ucla.edu/xpsq-dip-all/service/soap/current</soapUrl>
+        <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-all/service/rest/current/</restUrl>
+        <restExample>http://imex.mbi.ucla.edu/xpsq-dip-all/service/rest/current/query/Q09472</restExample>
         <organizationUrl>http://dip.doe-mbi.ucla.edu/</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:1047</tag> <!-- protein-protein-->
+        <tag>MI:1055</tag> <!-- internally-curated -->
+        <tag>MI:0959</tag> <!-- imex curation -->
+        <tag>MI:0960</tag> <!-- mimix -->
+        <tag>MI:1060</tag> <!-- spoke -->
+        <tag>MI:1051</tag> <!-- evidence -->
+    </service>
+
+    <service>
+        <name>DIP-IMEx</name>
+        <soapUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/soap/current</soapUrl>
+        <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/</restUrl>
+        <restExample>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/query/Q09472</restExample>
+        <organizationUrl>http://dip.doe-mbi.ucla.edu/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -63,6 +83,7 @@
         <restUrl>http://psicquic.curated.innatedb.com/webservices/current/search/</restUrl>
         <restExample>http://psicquic.curated.innatedb.com/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.innatedb.com</organizationUrl>
+        <description></description>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1055</tag> <!-- internally-curated -->
         <tag>MI:1060</tag> <!-- spoke -->
@@ -77,6 +98,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&amp;maxResults=100</restExample>
         <organizationUrl>http://www.ebi.ac.uk/intact</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1048</tag> <!-- smallmolecule-protein -->
@@ -92,6 +114,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/mpidb/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/mpidb/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://jcvi.org/mpidb/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -106,6 +129,7 @@
         <restUrl>http://irefindex.uio.no/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://irefindex.uio.no/psicquic-ws/webservices/current/search/query/*?maxResults=10</restExample>
         <organizationUrl>http://irefindex.uio.no/wiki/iRefIndex/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1058</tag> <!-- imported -->
@@ -119,6 +143,7 @@
         <restUrl>http://matrixdb.ibcp.fr:8080/webservices/current/search/</restUrl>
         <restExample>http://matrixdb.ibcp.fr:8080/webservices/current/search/query/*</restExample>
         <organizationUrl>http://matrixdb.ibcp.fr/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1048</tag> <!-- smallmolecule-protein -->
@@ -135,6 +160,7 @@
         <restUrl>http://mint.bio.uniroma2.it/mint/psicquic/webservices/current/search/</restUrl>
         <restExample>http://mint.bio.uniroma2.it/mint/psicquic/webservices/current/search/query/p53</restExample>
         <organizationUrl>http://mint.bio.uniroma2.it/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -150,6 +176,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome/webservices/current/search/query/Q5VT97</restExample>
         <organizationUrl>http://www.reactome.org/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1057</tag> <!-- predicted -->
@@ -162,6 +189,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome-fi/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome-fi/webservices/current/search/interactor/P00533</restExample>
         <organizationUrl>http://www.reactome.org/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1057</tag> <!-- predicted -->
@@ -175,6 +203,7 @@
         <restUrl>http://string.uzh.ch/psicquic/webservices/current/search/</restUrl>
         <restExample>http://string.uzh.ch/psicquic/webservices/current/search/query/species:9606?firstResult=0&amp;maxResults=5</restExample>
         <organizationUrl>http://string-db.org/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1057</tag> <!-- predicted -->
@@ -189,6 +218,7 @@
         <restUrl>http://webservice.baderlab.org:8480/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://webservice.baderlab.org:8480/psicquic-ws/webservices/current/search/query/species:9606?firstResult=0&amp;maxResults=5</restExample>
         <organizationUrl>http://www.baderlab.org</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1048</tag> <!-- smallmolecule-protein -->
@@ -203,6 +233,7 @@
         <restUrl>http://webservice.baderlab.org:8580/psicquic-interoporc-ws/webservices/current/search/</restUrl>
         <restExample>http://webservice.baderlab.org:8580/psicquic-interoporc-ws/webservices/current/search/query/species:3702?firstResult=0&amp;maxResults=25</restExample>
         <organizationUrl>http://biodev.extra.cea.fr/interoporc</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1057</tag> <!-- predicted -->
@@ -215,6 +246,7 @@
         <restUrl>http://psicquic.wishartlab.com/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://psicquic.wishartlab.com/psicquic-ws/webservices/current/search/query/DB00303</restExample>
         <organizationUrl>http://redpoll.pharmacy.ualberta.ca/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein -->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -228,6 +260,7 @@
         <restUrl>http://ophid.utoronto.ca/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://ophid.utoronto.ca/psicquic-ws/webservices/current/search/query/P00533</restExample>
         <organizationUrl>http://ophid.utoronto.ca/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1055</tag> <!-- internally-curated -->
@@ -241,6 +274,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/i2d/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/i2d/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://ophid.utoronto.ca/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1049</tag> <!-- nucleicacid-protein-->
@@ -257,6 +291,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/innatedb/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/innatedb/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.innatedb.ca/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1049</tag> <!-- nucleicacid-protein-->
@@ -275,6 +310,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/molcon/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/molcon/webservices/current/search/query/RDA32</restExample>
         <organizationUrl>http://www.molecularconnections.com</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1049</tag> <!-- nucleicacid-protein-->
@@ -291,6 +327,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/uniprot/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/uniprot/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.uniprot.org</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1049</tag> <!-- nucleicacid-protein-->
@@ -308,6 +345,7 @@
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/mbinfo/webservices/current/search/</restUrl>
         <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/mbinfo/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.mechanobio.info/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1049</tag> <!-- nucleicacid-protein-->
@@ -324,6 +362,7 @@
         <restUrl>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.bindingdb.org</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein-->
         <tag>MI:1051</tag> <!-- evidence -->
@@ -337,6 +376,7 @@
         <restUrl>http://pbildb1.univ-lyon1.fr:8080/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://pbildb1.univ-lyon1.fr:8080/psicquic-ws/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://pbildb1.univ-lyon1.fr/virhostnet</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1051</tag> <!-- evidence -->
@@ -350,6 +390,7 @@
         <restUrl>http://clipserve.clip.ubc.ca/topfind-psicquic-ws/current/search/</restUrl>
         <restExample>http://clipserve.clip.ubc.ca/topfind-psicquic-ws/current/search/query/P42593</restExample>
         <organizationUrl>http://ubc.ca/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1051</tag> <!-- evidence -->
@@ -363,6 +404,7 @@
         <restUrl>http://spike.cs.tau.ac.il/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://spike.cs.tau.ac.il/psicquic-ws/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl></organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1051</tag> <!-- evidence -->
@@ -375,6 +417,7 @@
         <restUrl>http://webservice.baderlab.org:8380/psi-gm/webservices/current/search/</restUrl>
         <restExample>http://webservice.baderlab.org:8380/psi-gm/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.genemania.org/</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1057</tag> <!-- predicted -->
@@ -387,6 +430,7 @@
         <restUrl>http://bar.utoronto.ca:9090/psicquic/webservices/current/search/</restUrl>
         <restExample>http://bar.utoronto.ca:9090/psicquic/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://bar.utoronto.ca</organizationUrl>
+        <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
         <tag>MI:1058</tag> <!-- imported -->

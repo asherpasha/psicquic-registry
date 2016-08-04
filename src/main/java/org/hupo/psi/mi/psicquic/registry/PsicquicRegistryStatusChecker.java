@@ -146,7 +146,7 @@ public class PsicquicRegistryStatusChecker {
 
                 countStream = (InputStream) countURL.getContent();
                 strCount = IOUtils.toString(countStream);
-                serviceStatus.setCount(Long.valueOf(strCount));
+                serviceStatus.setCount(Long.valueOf(strCount.trim().replaceAll("\n","")));
             } else {
                 serviceStatus.setActive(false);
             }

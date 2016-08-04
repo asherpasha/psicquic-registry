@@ -3,7 +3,7 @@ use strict;
 use LWP::Simple;
 
 # Registry URL that lists all ACTIVE PSICQUIC services
-# Documentation: http://code.google.com/p/psicquic/wiki/Registry
+# Documentation: http://psicquic.github.io/Registry.html
 my $url = 'http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=ACTIVE&format=txt';
 
 my $content = get $url;

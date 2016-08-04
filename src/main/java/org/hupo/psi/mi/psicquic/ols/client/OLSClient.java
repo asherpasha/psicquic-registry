@@ -1,95 +1,85 @@
 package org.hupo.psi.mi.psicquic.ols.client;
 
-import org.hupo.psi.mi.psicquic.ols.soap.Query;
-import org.hupo.psi.mi.psicquic.ols.soap.QueryServiceLocator;
+import org.springframework.web.client.RestClientException;
+import uk.ac.ebi.pride.utilities.ols.web.service.config.OLSWsConfigProd;
+import uk.ac.ebi.pride.utilities.ols.web.service.model.Identifier;
+import uk.ac.ebi.pride.utilities.ols.web.service.model.Term;
 
-import javax.xml.rpc.ServiceException;
-import java.rmi.RemoteException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class OLSClient {
 
+    private uk.ac.ebi.pride.utilities.ols.web.service.client.OLSClient olsClient;
+
+    public OLSClient() {
+        this.olsClient = new uk.ac.ebi.pride.utilities.ols.web.service.client.OLSClient(new OLSWsConfigProd());
+    }
+
+
     /**
      * calls OLS webserver and gets child terms for a termId
-     * @param termId  termId
-     * @param ontology  ontology
+     *
+     * @param termAccession termAccessopm
+     * @param ontology      ontology
      * @return Map of child terms - key is termId, value is termName
      * Map should not be null.
      */
-    public Map<String, String> getTermChildren(String termId, String ontology) {
+    public Map<String, String> getTermChildren(String termAccession, String ontology) {
 
-        Map retval = new HashMap<String, String>();
-        QueryServiceLocator locator = new QueryServiceLocator();
+        final Map<String, String> metadata = new HashMap<String, String>();
         try {
-            Query service = locator.getOntologyQuery();
-            HashMap terms = service.getTermChildren(termId, ontology, 1, null);
-            if (terms != null){
-                retval.putAll(terms);
+            //OLS client is sensitive case if the ontology es MI instead of mi doesn't return any result.
+            Identifier identifier = new Identifier(termAccession, Identifier.IdentifierType.OBO);
+            for (Term term : olsClient.getTermChildren(identifier, ontology.toLowerCase(), 1)) {
+                metadata.put(term.getTermOBOId().getIdentifier(), term.getLabel());
             }
-        } catch (ServiceException e) {
-            e.printStackTrace();
-        } catch (RemoteException e) {
+        } catch (RestClientException e) {
             e.printStackTrace();
         }
 
-        return retval;
-
+        return metadata;
     }
 
     /**
      * calls OLS webserver and gets suggestions of terms for a given query
-     * @param text text
+     *
+     * @param text     text
      * @param ontology ontology
      * @return of suggested terms - key is termId, value is termName.
      * Map should not be null.
      */
     public Map<String, String> getTermsByName(String text, String ontology) {
 
-        Map<String, String> retval = new HashMap<String, String>();
-        QueryServiceLocator locator = new QueryServiceLocator();
+        final Map<String, String> metadata = new HashMap<String, String>();
         try {
-            Query service = locator.getOntologyQuery();
-
-            // We change the getTermByName to getTermsByExactName to have more accuracy when
-            // we retrieve the term ids by name. We need to reverse the map because getTermsByExactName
-            // doesn't do it for us (something that didn't need it before because true boolean in getTermsByName did it)
-            // HashMap terms = service.getTermsByName(text, ontology, true);
-            HashMap<String,String> terms = service.getTermsByExactName(text, ontology);
-
-            if (terms != null){
-                // retval.putAll(terms);
-                for (Map.Entry<String, String> entry : terms.entrySet()){
-                    retval.put(entry.getValue(), entry.getKey()) ;
-                }
+            //OLS client is sensitive case if the ontology es MI instead of mi doesn't return any result.
+            Term term = olsClient.getExactTermByName(text, ontology.toLowerCase());
+            if (term != null) {
+                metadata.put(term.getLabel(), term.getTermOBOId().getIdentifier());
             }
-        } catch (ServiceException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        } catch (RemoteException e) {
+        }
+
+        return metadata;
+
+    }
+
+    public String getTermNameByTermId(String termId, String ontology) {
+        String retval = "";
+        try {
+            //OLS client is sensitive case if the ontology es MI instead of mi doesn't return any result.
+            Identifier identifier = new Identifier(termId, Identifier.IdentifierType.OBO);
+            retval = olsClient.getTermById(identifier, ontology.toLowerCase()).getLabel();
+            if (retval == null) {
+                retval = "";
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         return retval;
-
-    }
-
-    public String getTermNameByTermId(String termId, String ontology){
-    	  String retval = "";
-          QueryServiceLocator locator = new QueryServiceLocator();
-          try {
-              Query service = locator.getOntologyQuery();
-              retval = service.getTermById(termId, ontology);
-              if (retval == null){
-                 retval = "";
-              }
-
-          } catch (ServiceException e) {
-              e.printStackTrace();
-          } catch (RemoteException e) {
-              e.printStackTrace();
-          }
-
-          return retval;
 
     }
 }

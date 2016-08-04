@@ -23,12 +23,10 @@
         <!-- configurable bits -->
 
         <psicquic.registry.url>file:///home/marine/Projects/psicquic-registry.xml</psicquic.registry.url>
-        <jetty.port>19095</jetty.port>
+        <jetty.port>9091</jetty.port>
         <jetty.context>registry</jetty.context>
         <appRoot>/psicquic</appRoot>
     </properties>
-
-    <!-- TODO Clean the pom and check the source generator -->
 
     <build>
         <finalName>${artifactId}-${version}</finalName>
@@ -41,6 +39,24 @@
         </resources>
 
         <plugins>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m5.1</version>
+                <configuration>
+                    <flowInitContext>
+                        <masterBranchName>master</masterBranchName>
+                        <developBranchName>develop</developBranchName>
+                        <featureBranchPrefix>feature-</featureBranchPrefix>
+                        <releaseBranchPrefix>release-</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+                        <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
+                    </flowInitContext>
+                    <!-- see goals wiki page for configuration options -->
+                    <!--Whether to allow untracked files when checking if the working tree is clean.-->
+                    <allowUntracked>true</allowUntracked>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -139,8 +155,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
-
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
@@ -158,11 +172,10 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
+                <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.5</version>
                 <configuration>
-                    <remoteTagging>true</remoteTagging>
-                    <goals>deploy</goals>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
 
@@ -171,34 +184,13 @@
 
     <profiles>
         <profile>
-            <id>createIndex</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <phase>compile</phase>
-                                <goals>
-                                    <goal>exec</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <executable>java</executable>
-                            <arguments>
-                                <argument>-classpath</argument>
-                                <classpath />
-                                <argument>org.hupo.psi.mi.psicquic.registry.util.MitabIndexer</argument>
-                                <argument>${psicquic.index}</argument>
-                                <argument>${mitabFile}</argument>
-                                <argument>${hasHeader}</argument>
-                            </arguments>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
+            <id>disable-java8-doclint</id>
+            <activation>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <properties>
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </properties>
         </profile>
         <profile>
             <id>JDK6</id>
@@ -278,7 +270,6 @@
                     <version>1.1.3</version>
                     <scope>provided</scope>
                 </dependency>
-
             </dependencies>
         </profile>
     </profiles>
@@ -493,7 +484,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- OLS -->
+        <!-- OLS webservice -->
+        <dependency>
+            <groupId>uk.ac.ebi.pride.utilities</groupId>
+            <artifactId>ols-client</artifactId>
+            <version>2.4</version>
+        </dependency>
+
         <dependency>
             <groupId>axis</groupId>
             <artifactId>axis</artifactId>
@@ -518,32 +515,34 @@
 
     </dependencies>
 
-
     <repositories>
         <repository>
-            <id>intact.nexus</id>
-            <name>IntAct Nexus</name>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/groups/public</url>
+            <id>nexus-ebi-repo-old</id>
+            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo/</url>
+        </repository>
+        <repository>
+            <id>nexus-ebi-release-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
+        </repository>
+        <repository>
+            <id>nexus-ebi-snapshot-repo</id>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-snapshots/</url>
         </repository>
     </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>intact.nexus</id>
-            <name>IntAct Nexus</name>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/groups/public</url>
-        </pluginRepository>
-    </pluginRepositories>
-
     <distributionManagement>
+        <!-- EBI repo -->
         <repository>
-            <id>ebi-repo</id>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo</url>
+            <id>pst-release</id>
+            <name>EBI Nexus Repository</name>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-release</url>
         </repository>
-
+        <!-- EBI SNAPSHOT repo -->
         <snapshotRepository>
-            <id>ebi-repo-snapshots</id>
-            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo-snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+            <id>pst-snapshots</id>
+            <name>EBI Nexus Snapshots Repository</name>
+            <url>http://www.ebi.ac.uk/Tools/maven/repos/content/repositories/pst-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 

@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/embl-petrol-colours.css"
           type="text/css" media="screen">
 
-    <link rel="stylesheet" type="text/css" rel="stylesheet" href="css/psicquic-colours.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/psicquic-colours.css" media="screen"/>
 
 
     <!-- for production the above can be replaced with -->
@@ -185,7 +185,7 @@
             <nav>
                 <ul class="grid_24" id="local-nav">
                     <li class="first active"><a href="#">Home</a></li>
-                    <li><a href="http://code.google.com/p/psicquic/wiki/Registry">Documentation</a></li>
+                    <li><a href="http://psicquic.github.io/Registry.html">Documentation</a></li>
                     <li class="last"><a href="#aboutRegistry">About PSICQUIC Registry</a></li>
                     <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
                                                                                                      add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
@@ -275,7 +275,7 @@
                 <#if (service.tags)?has_content>
                     <#list service.tags as tag>
                         <#if tag?starts_with('MI:')>
-                            <a href="http://www.ebi.ac.uk/ontology-lookup/?termId=${tag}"
+                            <a href="http://www.ebi.ac.uk/ols/ontologies/mi/terms?obo_id=${tag}"
                                target="_blank">${termName(tag)}</a>
                         <#else>
                         ${termName(tag)}
@@ -300,7 +300,7 @@
             The registry also shows the number of total binary interactions that each resource has made available through
             PSICQUIC.
 
-            For more information about PSICQUIC, please visit the <a href="http://code.google.com/p/psicquic/">Google
+            For more information about PSICQUIC, please visit the <a href="http://psicquic.github.io/">Google
                 Project documentation</a>.</p>
     </div>
 
@@ -309,7 +309,7 @@
         <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
         <div id="local-footer" class="grid_24 clearfix">
             <p>Want to add your PSICQUIC service here? Check
-                <a href="http://code.google.com/p/psicquic/wiki/HowToInstallPsicquicSolr">this</a>.
+                <a href="http://psicquic.github.io/HowToInstallPsicquicSolr.html">this</a>.
             </p>
         </div>
 

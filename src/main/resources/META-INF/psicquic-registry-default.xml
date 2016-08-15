@@ -48,8 +48,8 @@
     <service>
         <name>DIP</name>
         <soapUrl>http://imex.mbi.ucla.edu/xpsq-dip-all/service/soap/current</soapUrl>
-        <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-all/service/rest/current/</restUrl>
-        <restExample>http://imex.mbi.ucla.edu/xpsq-dip-all/service/rest/current/query/Q09472</restExample>
+        <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-all/service/rest/current/search/</restUrl>
+        <restExample>http://imex.mbi.ucla.edu/xpsq-dip-all/service/rest/current/search/query/Q09472</restExample>
         <organizationUrl>http://dip.doe-mbi.ucla.edu/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -64,8 +64,8 @@
     <service>
         <name>DIP-IMEx</name>
         <soapUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/soap/current</soapUrl>
-        <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/</restUrl>
-        <restExample>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/query/Q09472</restExample>
+        <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/search/</restUrl>
+        <restExample>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/search/query/Q09472</restExample>
         <organizationUrl>http://dip.doe-mbi.ucla.edu/</organizationUrl>
         <description></description>
         <restricted>false</restricted>

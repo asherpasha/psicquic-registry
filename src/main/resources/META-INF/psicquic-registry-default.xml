@@ -78,6 +78,19 @@
     </service>
 
     <service>
+        <name>EBI-GOA-miRNA</name>
+        <soapUrl>http://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/psicquic</soapUrl>
+        <restUrl>http://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/</restUrl>
+        <restExample>http://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/interactor/URS000024463E_10090</restExample>
+        <organizationUrl>http://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:2229</tag>	<!-- nucleicacid-gene -->
+        <tag>MI:0961</tag>	<!-- rapid curation -->
+        <tag>MI:1054</tag>	<!-- experimentally-observed -->
+    </service>
+
+    <service>
         <name>InnateDB</name>
         <soapUrl>http://psicquic.curated.innatedb.com/webservices/psicquic</soapUrl>
         <restUrl>http://psicquic.curated.innatedb.com/webservices/current/search/</restUrl>

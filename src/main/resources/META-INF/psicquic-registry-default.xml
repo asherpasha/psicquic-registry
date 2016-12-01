@@ -2,11 +2,11 @@
 <registry xmlns="http://hupo.psi.org/psicquic/registry">
 
     <service>
-        <name>APID</name>
+        <name>APID Interactomes</name>
         <soapUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/psicquic</soapUrl>
         <restUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/interactor/P00533</restExample>
-        <organizationUrl>http://bioinfow.dep.usal.es/apid/index.htm</organizationUrl>
+        <organizationUrl> http://apid.dep.usal.es</organizationUrl>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
@@ -14,6 +14,7 @@
         <tag>MI:1060</tag> <!-- spoke -->
         <tag>MI:1052</tag> <!-- clustered -->
     </service>
+
 
     <service>
         <name>BioGrid</name>
@@ -375,6 +376,34 @@
         <restUrl>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <organizationUrl>http://www.bindingdb.org</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:1048</tag> <!-- smallmolecule-protein-->
+        <tag>MI:1051</tag> <!-- evidence -->
+        <tag>MI:1060</tag> <!-- spoke -->
+        <tag>MI:1054</tag> <!-- experimentally observed -->
+    </service>
+
+<!--    <service>
+        <name>BindingDBNew</name>
+        <soapUrl>http://bdb5.ucsd.edu/solr/psicquic/select</soapUrl>
+        <restUrl>http://bdb5.ucsd.edu/solr/psicquic/select/</restUrl>
+        <restExample>http://bdb5.ucsd.edu:8983/solr/psicquic/select/query/*?firstResult=1&amp;maxResults=10</restExample>
+        <organizationUrl>http://www.bindingdb.org</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:1048</tag> &lt;!&ndash; smallmolecule-protein&ndash;&gt;
+        <tag>MI:1051</tag> &lt;!&ndash; evidence &ndash;&gt;
+        <tag>MI:1060</tag> &lt;!&ndash; spoke &ndash;&gt;
+        <tag>MI:1054</tag> &lt;!&ndash; experimentally observed &ndash;&gt;
+    </service>-->
+
+    <service>
+        <name>BindingDBNEW</name>
+        <soapUrl>http://bdb5.ucsd.edu/solr/psicquic</soapUrl>
+        <restUrl> http://bdb5.ucsd.edu/psicquic-ws/webservices/psicquic/current/search/</restUrl>
+        <organizationUrl>http://www.bindingdb.org</organizationUrl>
+        <restExample> http://bdb5.ucsd.edu/psicquic-ws/webservices/psicquic/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein-->

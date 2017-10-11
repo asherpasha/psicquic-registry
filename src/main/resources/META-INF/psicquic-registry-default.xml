@@ -80,16 +80,31 @@
 
     <service>
         <name>EBI-GOA-miRNA</name>
-        <soapUrl>http://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/psicquic</soapUrl>
-        <restUrl>http://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/interactor/URS000024463E_10090</restExample>
-        <organizationUrl>http://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
+        <soapUrl>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/psicquic</soapUrl>
+        <restUrl>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/</restUrl>
+        <restExample>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/interactor/URS000024463E_10090</restExample>
+        <organizationUrl>https://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
         <description></description>
         <restricted>false</restricted>
-        <tag>MI:2229</tag>	<!-- nucleicacid-gene -->
-        <tag>MI:0961</tag>	<!-- rapid curation -->
-        <tag>MI:1054</tag>	<!-- experimentally-observed -->
+        <tag>MI:2229</tag>       <!-- nucleicacid-gene -->
+        <tag>MI:0961</tag>       <!-- rapid curation -->
+        <tag>MI:1054</tag>       <!-- experimentally-observed -->
     </service>
+
+    <service>
+        <name>EBI-GOA-nonIntAct</name>
+        <soapUrl>https://www.ebi.ac.uk/QuickGO/psicquic/webservices/psicquic</soapUrl>
+        <restUrl>https://www.ebi.ac.uk/QuickGO/psicquic/webservices/current/search/</restUrl>
+        <restExample>https://www.ebi.ac.uk/QuickGO/psicquic/webservices/current/search/interactor/amot</restExample>
+        <organizationUrl>https://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:1047</tag> <!-- protein-protein -->
+        <tag>MI:1049</tag> <!-- nucleicacid-protein -->
+        <tag>MI:0961</tag> <!-- rapid curation -->
+        <tag>MI:1054</tag> <!-- experimentally observed -->
+    </service>
+
 
     <service>
         <name>InnateDB</name>
@@ -372,45 +387,20 @@
 
     <service>
         <name>BindingDB</name>
-        <soapUrl>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/psicquic</soapUrl>
-        <restUrl>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/</restUrl>
-        <restExample>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <soapUrl>http://bindingdb.org/psicquic-ws</soapUrl>
+        <restUrl> http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/</restUrl>
         <organizationUrl>http://www.bindingdb.org</organizationUrl>
+        <restExample> http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein-->
+        <tag>MI:1055</tag> <!-- internally-curated -->
         <tag>MI:1051</tag> <!-- evidence -->
         <tag>MI:1060</tag> <!-- spoke -->
         <tag>MI:1054</tag> <!-- experimentally observed -->
     </service>
 
-<!--    <service>
-        <name>BindingDBNew</name>
-        <soapUrl>http://bdb5.ucsd.edu/solr/psicquic/select</soapUrl>
-        <restUrl>http://bdb5.ucsd.edu/solr/psicquic/select/</restUrl>
-        <restExample>http://bdb5.ucsd.edu:8983/solr/psicquic/select/query/*?firstResult=1&amp;maxResults=10</restExample>
-        <organizationUrl>http://www.bindingdb.org</organizationUrl>
-        <description></description>
-        <restricted>false</restricted>
-        <tag>MI:1048</tag> &lt;!&ndash; smallmolecule-protein&ndash;&gt;
-        <tag>MI:1051</tag> &lt;!&ndash; evidence &ndash;&gt;
-        <tag>MI:1060</tag> &lt;!&ndash; spoke &ndash;&gt;
-        <tag>MI:1054</tag> &lt;!&ndash; experimentally observed &ndash;&gt;
-    </service>-->
 
-    <service>
-        <name>BindingDBNEW</name>
-        <soapUrl>http://bdb5.ucsd.edu/solr/psicquic</soapUrl>
-        <restUrl> http://bdb5.ucsd.edu/psicquic-ws/webservices/psicquic/current/search/</restUrl>
-        <organizationUrl>http://www.bindingdb.org</organizationUrl>
-        <restExample> http://bdb5.ucsd.edu/psicquic-ws/webservices/psicquic/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
-        <description></description>
-        <restricted>false</restricted>
-        <tag>MI:1048</tag> <!-- smallmolecule-protein-->
-        <tag>MI:1051</tag> <!-- evidence -->
-        <tag>MI:1060</tag> <!-- spoke -->
-        <tag>MI:1054</tag> <!-- experimentally observed -->
-    </service>
 
     <service>
         <name>VirHostNet</name>

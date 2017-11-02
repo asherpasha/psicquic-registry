@@ -32,9 +32,6 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author Bruno Aranda (baranda@ebi.ac.uk)
@@ -63,7 +60,7 @@ public class PsicquicRegistryServiceImpl implements PsicquicRegistryService {
 	private PsicquicRegistryStatusChecker statusChecker;
 
 
-    public Response executeAction(String action, String name, String url, String format, String showRestricted, String tags, String excluded) throws IllegalActionException {
+    public Response executeAction(String action, String name, String url, String format, String protocol, String showRestricted, String tags, String excluded) throws IllegalActionException {
         Registry registry;
 
         if (ACTION_STATUS.equalsIgnoreCase(action)) {
@@ -95,7 +92,7 @@ public class PsicquicRegistryServiceImpl implements PsicquicRegistryService {
         }
 
         if ("txt".equals(format)) {
-            GenericEntity<RawTextStreamingOutput> entity = new GenericEntity<RawTextStreamingOutput>(new RawTextStreamingOutput(registry)){};
+            GenericEntity<RawTextStreamingOutput> entity = new GenericEntity<RawTextStreamingOutput>(new RawTextStreamingOutput(registry, protocol)){};
             return Response.ok().entity(entity).type(MediaType.TEXT_PLAIN_TYPE).build();
         }
 

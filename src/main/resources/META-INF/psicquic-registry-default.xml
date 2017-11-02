@@ -2,11 +2,11 @@
 <registry xmlns="http://hupo.psi.org/psicquic/registry">
 
     <service>
-        <name>APID</name>
+        <name>APID Interactomes</name>
         <soapUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/psicquic</soapUrl>
         <restUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/interactor/P00533</restExample>
-        <organizationUrl>http://bioinfow.dep.usal.es/apid/index.htm</organizationUrl>
+        <organizationUrl> http://apid.dep.usal.es</organizationUrl>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
@@ -14,6 +14,7 @@
         <tag>MI:1060</tag> <!-- spoke -->
         <tag>MI:1052</tag> <!-- clustered -->
     </service>
+
 
     <service>
         <name>BioGrid</name>
@@ -76,6 +77,34 @@
         <tag>MI:1060</tag> <!-- spoke -->
         <tag>MI:1051</tag> <!-- evidence -->
     </service>
+
+    <service>
+        <name>EBI-GOA-miRNA</name>
+        <soapUrl>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/psicquic</soapUrl>
+        <restUrl>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/</restUrl>
+        <restExample>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/interactor/URS000024463E_10090</restExample>
+        <organizationUrl>https://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:2229</tag>       <!-- nucleicacid-gene -->
+        <tag>MI:0961</tag>       <!-- rapid curation -->
+        <tag>MI:1054</tag>       <!-- experimentally-observed -->
+    </service>
+
+    <service>
+        <name>EBI-GOA-nonIntAct</name>
+        <soapUrl>https://www.ebi.ac.uk/QuickGO/psicquic/webservices/psicquic</soapUrl>
+        <restUrl>https://www.ebi.ac.uk/QuickGO/psicquic/webservices/current/search/</restUrl>
+        <restExample>https://www.ebi.ac.uk/QuickGO/psicquic/webservices/current/search/interactor/amot</restExample>
+        <organizationUrl>https://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
+        <description></description>
+        <restricted>false</restricted>
+        <tag>MI:1047</tag> <!-- protein-protein -->
+        <tag>MI:1049</tag> <!-- nucleicacid-protein -->
+        <tag>MI:0961</tag> <!-- rapid curation -->
+        <tag>MI:1054</tag> <!-- experimentally observed -->
+    </service>
+
 
     <service>
         <name>InnateDB</name>
@@ -358,17 +387,20 @@
 
     <service>
         <name>BindingDB</name>
-        <soapUrl>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/psicquic</soapUrl>
-        <restUrl>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/</restUrl>
-        <restExample>http://catalyst.ucsd.edu:8080/psicquic-ws/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <soapUrl>http://bindingdb.org/psicquic-ws</soapUrl>
+        <restUrl> http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/</restUrl>
         <organizationUrl>http://www.bindingdb.org</organizationUrl>
+        <restExample> http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein-->
+        <tag>MI:1055</tag> <!-- internally-curated -->
         <tag>MI:1051</tag> <!-- evidence -->
         <tag>MI:1060</tag> <!-- spoke -->
         <tag>MI:1054</tag> <!-- experimentally observed -->
     </service>
+
+
 
     <service>
         <name>VirHostNet</name>

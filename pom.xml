@@ -13,8 +13,8 @@
         <connection>scm:git:https://github.com/PSICQUIC/psicquic-registry</connection>
         <developerConnection>scm:git:https://github.com/PSICQUIC/psicquic-registry</developerConnection>
         <url>https://github.com/PSICQUIC/psicquic-registry</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <cxf.version>2.6.3</cxf.version>
@@ -40,6 +40,8 @@
 
         <plugins>
             <plugin>
+                <!--mvn jgitflow:release-start -Dgit.user=xxxx -Dgit.password=xxxx-->
+                <!--mvn jgitflow:release-finish -Dmaven.javadoc.skip=true -Dgit.user=xxxx -Dgit.password=xxxx-->
                 <groupId>external.atlassian.jgitflow</groupId>
                 <artifactId>jgitflow-maven-plugin</artifactId>
                 <version>1.0-m5.1</version>
@@ -53,9 +55,14 @@
                         <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
                     </flowInitContext>
                     <!-- see goals wiki page for configuration options -->
-                    <!--Whether to allow untracked files when checking if the working tree is clean.-->
-                    <allowUntracked>true</allowUntracked>
                     <noDeploy>true</noDeploy>
+                    <username>${git.user}</username>
+                    <password>${git.password}</password>
+                    <pullMaster>true</pullMaster>
+                    <pullDevelop>true</pullDevelop>
+                    <pushReleases>true</pushReleases>
+                    <pushHotfixes>true</pushHotfixes>
+                    <pushFeatures>true</pushFeatures>
                 </configuration>
             </plugin>
             <plugin>
@@ -99,25 +106,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.3</version>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <attach>false</attach>
-                    <descriptors>
-                        <descriptor>src/main/assembly/bin-with-dependencies.xml</descriptor>
-                    </descriptors>
-                </configuration>
             </plugin>
             <!-- Conversion of XML Schema into Java source code using JAXB-XJC -->
             <plugin>

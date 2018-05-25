@@ -6,7 +6,7 @@
         <soapUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/psicquic</soapUrl>
         <restUrl>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/</restUrl>
         <restExample>http://cicblade.dep.usal.es/psicquic-ws/webservices/current/search/interactor/P00533</restExample>
-        <organizationUrl> http://apid.dep.usal.es</organizationUrl>
+        <organizationUrl>http://apid.dep.usal.es</organizationUrl>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
@@ -20,7 +20,8 @@
         <name>BioGrid</name>
         <soapUrl>http://tyerslab.bio.ed.ac.uk:8080/psicquic/webservices/psicquic</soapUrl>
         <restUrl>http://tyerslab.bio.ed.ac.uk:8080/psicquic/webservices/current/search/</restUrl>
-        <restExample>http://tyerslab.bio.ed.ac.uk:8080/psicquic/webservices/current/search/interactor/brca2</restExample>
+        <restExample>http://tyerslab.bio.ed.ac.uk:8080/psicquic/webservices/current/search/interactor/brca2
+        </restExample>
         <organizationUrl>http://www.thebiogrid.org/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -35,7 +36,9 @@
         <name>ChEMBL</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/chembl/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/chembl/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/chembl/webservices/current/search/interactor/imatinib</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/chembl/webservices/current/search/interactor/imatinib
+        </restExample>
         <organizationUrl>http://www.ebi.ac.uk/chembl</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -82,7 +85,9 @@
         <name>EBI-GOA-miRNA</name>
         <soapUrl>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/psicquic</soapUrl>
         <restUrl>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/</restUrl>
-        <restExample>https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/interactor/URS000024463E_10090</restExample>
+        <restExample>
+            https://www.ebi.ac.uk/QuickGO/psicquic-rna/webservices/current/search/interactor/URS000024463E_10090
+        </restExample>
         <organizationUrl>https://www.ucl.ac.uk/functional-gene-annotation/psicquic</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -125,7 +130,9 @@
         <name>IntAct</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&amp;maxResults=100</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/species:human?firstResult=0&amp;maxResults=100
+        </restExample>
         <organizationUrl>http://www.ebi.ac.uk/intact</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -141,7 +148,9 @@
         <name>MPIDB</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/mpidb/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/mpidb/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/mpidb/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/mpidb/webservices/current/search/query/*?firstResult=0&amp;maxResults=10
+        </restExample>
         <organizationUrl>http://jcvi.org/mpidb/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -152,12 +161,26 @@
         <tag>MI:1051</tag> <!-- evidence -->
     </service>
 
+    <!--    <service>
+            <name>iRefIndex</name>
+            <soapUrl>http://irefindex.uio.no/psicquic-ws/webservices/psicquic</soapUrl>
+            <restUrl>http://irefindex.uio.no/psicquic-ws/webservices/current/search/</restUrl>
+            <restExample>http://irefindex.uio.no/psicquic-ws/webservices/current/search/query/*?maxResults=10</restExample>
+            <organizationUrl>http://irefindex.uio.no/wiki/iRefIndex/</organizationUrl>
+            <description></description>
+            <restricted>false</restricted>
+            <tag>MI:1047</tag> &lt;!&ndash; protein-protein&ndash;&gt;
+            <tag>MI:1058</tag> &lt;!&ndash; imported &ndash;&gt;
+            <tag>MI:1062</tag> &lt;!&ndash; bipartite &ndash;&gt;
+            <tag>MI:1051</tag> &lt;!&ndash; evidence &ndash;&gt;
+        </service>-->
+
     <service>
         <name>iRefIndex</name>
-        <soapUrl>http://irefindex.uio.no/psicquic-ws/webservices/psicquic</soapUrl>
-        <restUrl>http://irefindex.uio.no/psicquic-ws/webservices/current/search/</restUrl>
-        <restExample>http://irefindex.uio.no/psicquic-ws/webservices/current/search/query/*?maxResults=10</restExample>
-        <organizationUrl>http://irefindex.uio.no/wiki/iRefIndex/</organizationUrl>
+        <soapUrl>http://irefindex.vib.be/webservices/psicquic</soapUrl>
+        <restUrl>http://irefindex.vib.be/webservices/current/search/</restUrl>
+        <restExample>http://irefindex.vib.be/webservices/current/search/query/*?maxResults=10</restExample>
+        <organizationUrl>http://irefindex.vib.be/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->
@@ -203,7 +226,8 @@
         <name>Reactome</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome/webservices/current/search/query/Q5VT97</restExample>
+        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome/webservices/current/search/query/Q5VT97
+        </restExample>
         <organizationUrl>http://www.reactome.org/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -216,7 +240,9 @@
         <name>Reactome-FIs</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome-fi/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome-fi/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome-fi/webservices/current/search/interactor/P00533</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/reactome-fi/webservices/current/search/interactor/P00533
+        </restExample>
         <organizationUrl>http://www.reactome.org/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -245,7 +271,9 @@
         <name>BIND</name>
         <soapUrl>http://webservice.baderlab.org:8480/psicquic-ws/webservices/psicquic</soapUrl>
         <restUrl>http://webservice.baderlab.org:8480/psicquic-ws/webservices/current/search/</restUrl>
-        <restExample>http://webservice.baderlab.org:8480/psicquic-ws/webservices/current/search/query/species:9606?firstResult=0&amp;maxResults=5</restExample>
+        <restExample>
+            http://webservice.baderlab.org:8480/psicquic-ws/webservices/current/search/query/species:9606?firstResult=0&amp;maxResults=5
+        </restExample>
         <organizationUrl>http://www.baderlab.org</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -260,7 +288,9 @@
         <name>Interoporc</name>
         <soapUrl>http://webservice.baderlab.org:8580/psicquic-interoporc-ws/webservices/psicquic</soapUrl>
         <restUrl>http://webservice.baderlab.org:8580/psicquic-interoporc-ws/webservices/current/search/</restUrl>
-        <restExample>http://webservice.baderlab.org:8580/psicquic-interoporc-ws/webservices/current/search/query/species:3702?firstResult=0&amp;maxResults=25</restExample>
+        <restExample>
+            http://webservice.baderlab.org:8580/psicquic-interoporc-ws/webservices/current/search/query/species:3702?firstResult=0&amp;maxResults=25
+        </restExample>
         <organizationUrl>http://biodev.extra.cea.fr/interoporc</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -301,7 +331,9 @@
         <name>I2D-IMEx</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/i2d/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/i2d/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/i2d/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/i2d/webservices/current/search/query/*?firstResult=0&amp;maxResults=10
+        </restExample>
         <organizationUrl>http://ophid.utoronto.ca/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -318,7 +350,9 @@
         <name>InnateDB-IMEx</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/innatedb/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/innatedb/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/innatedb/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/innatedb/webservices/current/search/query/*?firstResult=0&amp;maxResults=10
+        </restExample>
         <organizationUrl>http://www.innatedb.ca/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -332,12 +366,12 @@
     </service>
 
 
-
     <service>
         <name>MolCon</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/molcon/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/molcon/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/molcon/webservices/current/search/query/RDA32</restExample>
+        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/molcon/webservices/current/search/query/RDA32
+        </restExample>
         <organizationUrl>http://www.molecularconnections.com</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -354,7 +388,9 @@
         <name>UniProt</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/uniprot/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/uniprot/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/uniprot/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/uniprot/webservices/current/search/query/*?firstResult=0&amp;maxResults=10
+        </restExample>
         <organizationUrl>http://www.uniprot.org</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -372,7 +408,9 @@
         <name>MBInfo</name>
         <soapUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/mbinfo/webservices/psicquic</soapUrl>
         <restUrl>http://www.ebi.ac.uk/Tools/webservices/psicquic/mbinfo/webservices/current/search/</restUrl>
-        <restExample>http://www.ebi.ac.uk/Tools/webservices/psicquic/mbinfo/webservices/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <restExample>
+            http://www.ebi.ac.uk/Tools/webservices/psicquic/mbinfo/webservices/current/search/query/*?firstResult=0&amp;maxResults=10
+        </restExample>
         <organizationUrl>http://www.mechanobio.info/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
@@ -388,9 +426,9 @@
     <service>
         <name>BindingDB</name>
         <soapUrl>http://bindingdb.org/psicquic-ws</soapUrl>
-        <restUrl> http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/</restUrl>
+        <restUrl>http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/</restUrl>
         <organizationUrl>http://www.bindingdb.org</organizationUrl>
-        <restExample> http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
+        <restExample>http://bindingdb.org/psicquic-ws/webservices/psicquic/current/search/query/*?firstResult=0&amp;maxResults=10</restExample>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1048</tag> <!-- smallmolecule-protein-->
@@ -399,7 +437,6 @@
         <tag>MI:1060</tag> <!-- spoke -->
         <tag>MI:1054</tag> <!-- experimentally observed -->
     </service>
-
 
 
     <service>

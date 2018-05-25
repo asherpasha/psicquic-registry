@@ -29,9 +29,11 @@ import java.io.*;
 public class RawTextStreamingOutput implements StreamingOutput {
 
     private Registry registry;
+    private String protocol;
 
-    public RawTextStreamingOutput(Registry registry) {
+    public RawTextStreamingOutput(Registry registry, String protocol) {
         this.registry = registry;
+        this.protocol = protocol;
     }
 
     public void write(OutputStream outputStream) throws IOException, WebApplicationException {
@@ -39,7 +41,11 @@ public class RawTextStreamingOutput implements StreamingOutput {
 
         try{
             for (ServiceType service : registry.getServices()) {
-                writer.write(service.getName()+"="+service.getSoapUrl()+"\n");
+                if("rest".equalsIgnoreCase(protocol)) {
+                    writer.write(service.getName() + "=" + service.getRestUrl() + "\n");
+                } else {
+                    writer.write(service.getName() + "=" + service.getSoapUrl() + "\n");
+                }
             }
         }
         finally {

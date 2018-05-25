@@ -40,6 +40,7 @@ public interface PsicquicRegistryService {
                            @QueryParam("name") String name,
                            @DefaultValue("0") @QueryParam("url") String url,
                            @DefaultValue("html") @QueryParam("format") String format,
+                           @DefaultValue("") @QueryParam("protocol") String protocol,
                            @DefaultValue("y") @QueryParam("restricted") String showRestricted,
                            @DefaultValue("") @QueryParam("tags") String tags,
                            @DefaultValue("") @QueryParam("excluded") String excludedUrls) throws IllegalActionException;

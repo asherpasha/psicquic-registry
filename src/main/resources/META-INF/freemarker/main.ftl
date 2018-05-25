@@ -399,7 +399,7 @@
 
 
 <!--<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>-->
-<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+<script  src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
 <!-- end scripts-->
 
 <script src="js/footable/footable-0.1.js" type="text/javascript"></script>

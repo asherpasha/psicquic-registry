@@ -87,6 +87,25 @@
             border-radius: 5px 5px 5px 5px;
         }
 
+        a.white-color{
+            color: #fff;
+        }
+        a#data-protection-agree {
+            color: #fff;
+        }
+        .data-protection-banner .medium-8 {
+            width: 74%;
+            margin-left: 1%;
+            float: left;
+        }
+
+        .data-protection-banner .medium-4 {
+            width: 23%;
+            margin-right: 2%;
+            float: right;
+            text-align: right;
+        }
+
         /* --------------------------------
             GLOBAL SEARCH TEMPLATE - END
            -------------------------------- */
@@ -379,17 +398,22 @@
   -->
 
 
-<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>
-<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+<!--<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>-->
+<script  src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
 <!-- end scripts-->
 
 <script src="js/footable/footable-0.1.js" type="text/javascript"></script>
 <script src="js/footable/footable.sortable.js" type="text/javascript"></script>
 <script src="js/footable/footable.filter.js" type="text/javascript"></script>
+<script src="js/footable/cookie-banner.js" type="text/javascript"></script>
 
 <script type="text/javascript">
     $(function () {
         $('table').footable();
+    });
+
+    $( document ).ready(function() {
+        ebi_cookie_banner();
     });
 </script>
 

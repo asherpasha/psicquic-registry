@@ -1,9 +1,5 @@
 import urllib2
-import sys
-from xml.dom.ext.reader import Sax2
-from xml.dom.ext import PrettyPrint
-from xml.dom.NodeFilter import NodeFilter
-from xml import xpath
+import xml.etree.ElementTree as ET
 
 urlStr = 'http://www.ebi.ac.uk/Tools/webservices/psicquic/registry/registry?action=STATUS&format=xml'
 
@@ -17,26 +13,20 @@ except IOError:
     content = ''
 
 # Create the XML reader
-reader = Sax2.Reader()
-
-doc = reader.fromString(content)
-
-#PrettyPrint(doc)
+root = ET.fromstring(content)
+xmlns = '{http://hupo.psi.org/psicquic/registry}'
 
 totalCount = 0
-serviceCount = 0;
-activeCount = 0;
+serviceCount = 0
+activeCount = 0
 
-# getting the service nodes
-serviceNodes = xpath.Evaluate('service', doc.documentElement)
-
-for serviceNode in serviceNodes:
+for service in root.findall(xmlns + 'service'):
     # Getting some of the elements for each node
-    name = serviceNode.getElementsByTagName('name')[0].firstChild.nodeValue
-    active = serviceNode.getElementsByTagName('active')[0].firstChild.nodeValue
-    interactionCount = serviceNode.getElementsByTagName('count')[0].firstChild.nodeValue
-    restUrl = serviceNode.getElementsByTagName('restUrl')[0].firstChild.nodeValue
-    restExample = serviceNode.getElementsByTagName('restExample')[0].firstChild.nodeValue
+    name = service.find(xmlns + 'name').text
+    active = service.find(xmlns + 'active').text
+    interactionCount = service.find(xmlns + 'count').text
+    restUrl = service.find(xmlns + 'restUrl').text
+    restExample = service.find(xmlns + 'restExample').text
 
     print 'Service: '+ name +' =========================================================================='
     print '\tActive: ' + active
@@ -47,10 +37,10 @@ for serviceNode in serviceNodes:
     totalCount = totalCount + int(interactionCount)
     serviceCount = serviceCount + 1
 
-    if bool(active):
+    if active.lower() == 'true':
        activeCount = activeCount + 1
 
 # Print totals
 print '\nTotal evidences: ' + str(totalCount)
 print 'Total services: ' + str(serviceCount)
-print '\tActive: ' + str(serviceCount)
+print '\tActive: ' + str(activeCount)

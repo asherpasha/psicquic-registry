@@ -22,7 +22,7 @@
 
         <!-- configurable bits -->
 
-        <psicquic.registry.url>file:///home/marine/Projects/psicquic-registry.xml</psicquic.registry.url>
+        <psicquic.registry.url>file://${project.basedir}/src/main/resources/META-INF/psicquic-registry-test.xml</psicquic.registry.url>
         <jetty.port>9091</jetty.port>
         <jetty.context>registry</jetty.context>
         <appRoot>/psicquic</appRoot>

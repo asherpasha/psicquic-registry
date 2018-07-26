@@ -10,3 +10,6 @@ cd psicquic-registry
 mvn clean install
 mvn jetty:run
 ```
+Then, browse to:
+
+```http://localhost:9091/psicquic/registry/registry?action=STATUS```

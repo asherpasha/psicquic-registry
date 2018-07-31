@@ -451,5 +451,6 @@
     <!--<tag>MI:1047</tag> &lt;!&ndash; protein-protein&ndash;&gt;-->
     <!--<tag>MI:1058</tag> &lt;!&ndash; imported &ndash;&gt;-->
     <!--<tag>MI:1052</tag> &lt;!&ndash; clustered &ndash;&gt;-->
+    <!--<tag>MI:2233</tag> &lt;!&ndash; causal interaction &ndash;&gt;-->
     <!--</service>-->
 </registry>

@@ -26,6 +26,8 @@
         <jetty.port>9091</jetty.port>
         <jetty.context>registry</jetty.context>
         <appRoot>/psicquic</appRoot>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>

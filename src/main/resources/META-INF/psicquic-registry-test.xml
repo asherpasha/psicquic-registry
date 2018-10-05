@@ -61,7 +61,7 @@
         <tag>MI:1051</tag> <!-- evidence -->
     </service>
 
-    <service>
+    <!--<service>
         <name>DIP-IMEx</name>
         <soapUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/soap/current</soapUrl>
         <restUrl>http://imex.mbi.ucla.edu/xpsq-dip-imex/service/rest/current/search/</restUrl>
@@ -69,13 +69,13 @@
         <organizationUrl>http://dip.doe-mbi.ucla.edu/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
-        <tag>MI:1047</tag> <!-- protein-protein-->
-        <tag>MI:1055</tag> <!-- internally-curated -->
-        <tag>MI:0959</tag> <!-- imex curation -->
-        <tag>MI:0960</tag> <!-- mimix -->
-        <tag>MI:1060</tag> <!-- spoke -->
-        <tag>MI:1051</tag> <!-- evidence -->
-    </service>
+        <tag>MI:1047</tag> &lt;!&ndash; protein-protein&ndash;&gt;
+        <tag>MI:1055</tag> &lt;!&ndash; internally-curated &ndash;&gt;
+        <tag>MI:0959</tag> &lt;!&ndash; imex curation &ndash;&gt;
+        <tag>MI:0960</tag> &lt;!&ndash; mimix &ndash;&gt;
+        <tag>MI:1060</tag> &lt;!&ndash; spoke &ndash;&gt;
+        <tag>MI:1051</tag> &lt;!&ndash; evidence &ndash;&gt;
+    </service>-->
 
     <service>
         <name>InnateDB</name>
@@ -451,5 +451,6 @@
     <!--<tag>MI:1047</tag> &lt;!&ndash; protein-protein&ndash;&gt;-->
     <!--<tag>MI:1058</tag> &lt;!&ndash; imported &ndash;&gt;-->
     <!--<tag>MI:1052</tag> &lt;!&ndash; clustered &ndash;&gt;-->
+    <!--<tag>MI:2233</tag> &lt;!&ndash; causal interaction &ndash;&gt;-->
     <!--</service>-->
 </registry>

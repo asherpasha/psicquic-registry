@@ -319,7 +319,7 @@
             The registry also shows the number of total binary interactions that each resource has made available through
             PSICQUIC.
 
-            For more information about PSICQUIC, please visit the <a href="http://psicquic.github.io/">Google
+            For more information about PSICQUIC, please visit the <a href="http://psicquic.github.io/">
                 Project documentation</a>.</p>
     </div>
 

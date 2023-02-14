@@ -73,7 +73,7 @@ public class PsicquicRegistryThreadConfig implements InitializingBean, Disposabl
         shutDownThreadContext();
 
         // clear axis thread local
-        Method getMc = ReflectionUtil.findMethod(MethodCache.class,
+        Method getMc = ReflectionUtil.getMethod(MethodCache.class,
                 "getMethodCache");
         Object theObject = MethodCache.getInstance();
         Map mcMap = (Map) getMc.invoke(theObject, null);

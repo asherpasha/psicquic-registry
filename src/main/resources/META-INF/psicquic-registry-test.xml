@@ -125,10 +125,10 @@
 
     <service>
         <name>iRefIndex</name>
-        <soapUrl>http://irefindex.uio.no/psicquic-ws/webservices/psicquic</soapUrl>
-        <restUrl>http://irefindex.uio.no/psicquic-ws/webservices/current/search/</restUrl>
-        <restExample>http://irefindex.uio.no/psicquic-ws/webservices/current/search/query/*?maxResults=10</restExample>
-        <organizationUrl>http://irefindex.uio.no/wiki/iRefIndex/</organizationUrl>
+        <soapUrl>https://irefindex.vib.be/webservices/psicquic</soapUrl>
+        <restUrl>https://irefindex.vib.be/webservices/current/search/</restUrl>
+        <restExample>https://irefindex.vib.be/webservices/current/search/query/*?maxResults=10</restExample>
+        <organizationUrl>https://irefindex.vib.be/</organizationUrl>
         <description></description>
         <restricted>false</restricted>
         <tag>MI:1047</tag> <!-- protein-protein-->

@@ -294,7 +294,7 @@
                 <#if (service.tags)?has_content>
                     <#list service.tags as tag>
                         <#if tag?starts_with('MI:')>
-                            <a href="http://www.ebi.ac.uk/ols/ontologies/mi/terms?obo_id=${tag}"
+                            <a href="http://www.ebi.ac.uk/ols4/ontologies/mi/terms?obo_id=${tag}"
                                target="_blank">${termName(tag)}</a>
                         <#else>
                         ${termName(tag)}
